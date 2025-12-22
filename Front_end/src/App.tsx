@@ -9,6 +9,7 @@ import LessonPlans from "./pages/LessonPlans";
 import PowerPointSlides from "./pages/PowerPointSlides";
 import TutorialVideos from "./pages/TutorialVideos";
 import AllResources from "./pages/AllResources";
+import Resources from "./pages/Resources";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/slide-powerpoint" element={<PowerPointSlides />} />
           <Route path="/video-huong-dan" element={<TutorialVideos />} />
           <Route path="/tai-lieu-tong-hop" element={<AllResources />} />
+          <Route path="/tai-nguyen/:category/:type" element={<Resources />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

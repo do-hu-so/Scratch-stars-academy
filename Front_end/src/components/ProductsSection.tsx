@@ -1,42 +1,46 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Download, Star, Play } from "lucide-react";
-import scratchBook from "@/assets/scratch-book.png";
+import imgProduct1 from "@/assets/lop3.jpg";
+import imgProduct2 from "@/assets/lop4.jpg";
+import imgProduct3 from "@/assets/lop5.jpg";
+import imgProduct4 from "@/assets/combo.jpg";
+
 
 const products = [
   {
     id: 1,
-    title: "Scratch Cơ Bản - Tập 1",
-    type: "Sách + Video",
-    price: "199,000đ",
+    title: "Tài liệu Scratch Lớp 3",
+    type: "Sách",
+    price: "49,000đ",
     originalPrice: "299,000đ",
     rating: 4.9,
     reviews: 128,
-    image: scratchBook,
+    image: imgProduct1,
     badge: "Bán chạy",
     badgeColor: "bg-primary",
   },
   {
     id: 2,
-    title: "Bộ tài liệu giáo viên",
-    type: "PDF + PowerPoint",
-    price: "349,000đ",
+    title: "Tài liệu Scratch Lớp 4",
+    type: "Sách",
+    price: "49,000đ",
     originalPrice: "499,000đ",
     rating: 5.0,
     reviews: 89,
-    image: scratchBook,
+    image: imgProduct2,
     badge: "Hot",
     badgeColor: "bg-destructive",
   },
   {
     id: 3,
-    title: "Video khóa học đầy đủ",
-    type: "40 video HD",
-    price: "599,000đ",
+    title: "Tài liệu Scratch Lớp 5",
+    type: "Sách",
+    price: "49,000đ",
     originalPrice: "899,000đ",
     rating: 4.8,
     reviews: 256,
-    image: scratchBook,
+    image: imgProduct3,
     badge: "Giảm 33%",
     badgeColor: "bg-success",
   },
@@ -48,7 +52,7 @@ const products = [
     originalPrice: "1,299,000đ",
     rating: 5.0,
     reviews: 67,
-    image: scratchBook,
+    image: imgProduct4,
     badge: "Tiết kiệm",
     badgeColor: "bg-purple",
   },
@@ -89,7 +93,7 @@ const ProductsSection = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className={`absolute top-3 left-3 px-3 py-1 ${product.badgeColor} text-primary-foreground text-xs font-bold rounded-full`}>
                     {product.badge}
@@ -105,7 +109,7 @@ const ProductsSection = () => {
                 <div className="p-4 flex-grow flex flex-col">
                   <p className="text-xs text-muted-foreground mb-1">{product.type}</p>
                   <h3 className="font-bold mb-2 line-clamp-2">{product.title}</h3>
-                  
+
                   <div className="flex items-center gap-1 mb-3">
                     <Star className="w-4 h-4 fill-accent text-accent" />
                     <span className="font-semibold text-sm">{product.rating}</span>

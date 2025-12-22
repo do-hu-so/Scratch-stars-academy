@@ -55,9 +55,9 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6"
             >
-              Khám phá thế giới{" "}
-              <span className="text-gradient">lập trình Scratch</span>{" "}
-              cho trẻ em
+              Hệ thống học liệu số{" "}
+              <span className="text-gradient">Tích hợp STEM</span>{" "}
+              Hỗ trợ giáo viên tiêu học dạy lập trình - nhớ sửa ĐẤY
             </motion.h1>
 
             <motion.p
@@ -66,8 +66,13 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Sách, video, tài liệu và công cụ giảng dạy được thiết kế đặc biệt 
-              giúp trẻ em từ 6-14 tuổi học lập trình một cách sáng tạo và thú vị.
+              <span className="inline-flex items-center gap-2 font-bold">
+                <span className="text-3xl animate-bounce">🚀</span>
+                <span className="text-primary text-2xl">Học lập trình sớm</span>
+                <span className="text-yellow-500 text-2xl">✨</span>
+                <span className="text-secondary text-2xl">Mở rộng tương lai</span>
+                <span className="text-3xl animate-bounce">🌍</span>
+              </span>
             </motion.p>
 
             <motion.div
