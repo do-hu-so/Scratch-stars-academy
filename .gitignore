@@ -210,3 +210,4 @@ backend/chroma_db/
 front_end/src/video
 Front_end/src/powerpoint
 Front_end/src/giaoan
+!Front_end/src/lib/
