@@ -1,3 +1,10 @@
 fastapi
 uvicorn
 docx2txt
+groq
+python-dotenv
+langchain-community
+langchain-huggingface
+chromadb
+pypdf
+sentence-transformers
