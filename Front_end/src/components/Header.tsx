@@ -7,9 +7,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Sản phẩm", href: "#products", icon: Book },
-    { label: "Học liệu", href: "#resources", icon: GraduationCap },
-    { label: "Giáo viên", href: "#teachers", icon: GraduationCap },
+    { label: "Trang chủ", href: "/", icon: Book },
+    { label: "Sản phẩm", href: "/tat-ca-san-pham", icon: GraduationCap },
+    { label: "Giới thiệu", href: "#teachers", icon: GraduationCap },
     { label: "Liên hệ", href: "#contact", icon: MessageCircle },
   ];
 

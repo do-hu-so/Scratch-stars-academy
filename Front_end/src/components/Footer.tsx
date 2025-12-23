@@ -50,7 +50,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors">Sách lập trình</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Video khóa học</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Tài liệu PDF</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Bộ công cụ giảng dạy</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Code</a></li>
             </ul>
           </motion.div>
 
@@ -81,11 +81,11 @@ const Footer = () => {
             <ul className="space-y-3 text-background/70">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>123 Đường ABC, Quận 1, TP. Hồ Chí Minh</span>
+                <span>Đại Học Tân Trào - Km 6, TP Tuyên Quang</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>0123 456 789</span>
+                <span>0901234567</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 flex-shrink-0" />

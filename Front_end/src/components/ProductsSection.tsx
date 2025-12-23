@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Download, Star, Play } from "lucide-react";
-import imgProduct1 from "@/assets/lop3.jpg";
-import imgProduct2 from "@/assets/lop4.jpg";
-import imgProduct3 from "@/assets/lop5.jpg";
+import imgProduct1 from "@/assets/lop3.png";
+import imgProduct2 from "@/assets/lop4.png";
+import imgProduct3 from "@/assets/lop5.png";
 import imgProduct4 from "@/assets/combo.jpg";
 
 
@@ -48,7 +48,7 @@ const products = [
     id: 4,
     title: "Combo Scratch Pro",
     type: "Sách + Video + Tài liệu",
-    price: "799,000đ",
+    price: "599,000đ",
     originalPrice: "1,299,000đ",
     rating: 5.0,
     reviews: 67,
@@ -142,7 +142,11 @@ const ProductsSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button variant="outline" size="lg">
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => window.location.href = '/tat-ca-san-pham'} // Simple navigation for now, or use Link if already imported
+          >
             Xem tất cả sản phẩm
           </Button>
         </motion.div>

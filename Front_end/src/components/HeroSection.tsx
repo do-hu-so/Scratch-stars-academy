@@ -53,11 +53,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6"
+              className="font-black leading-tight mb-6"
             >
-              Hệ thống học liệu số{" "}
-              <span className="text-gradient">Tích hợp STEM</span>{" "}
-              Hỗ trợ giáo viên tiêu học dạy lập trình - nhớ sửa ĐẤY
+              <span className="block text-3xl md:text-4xl lg:text-5xl">Hệ thống học liệu số</span>
+              <span className="block text-gradient text-5xl md:text-6xl lg:text-7xl mt-1">Tích hợp STEM</span>
+              <span className="block text-3xl md:text-4xl lg:text-5xl mt-1">Hỗ trợ giáo viên tiểu học dạy lập trình</span>
             </motion.h1>
 
             <motion.p
@@ -121,48 +121,50 @@ const HeroSection = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10"
+              className="relative z-10 flex flex-col items-center"
             >
               <img
                 src={heroImage}
                 alt="Trẻ em học lập trình Scratch"
                 className="w-full h-auto rounded-3xl shadow-card"
               />
-            </motion.div>
 
-            {/* Floating Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -left-6 bg-card p-4 rounded-2xl shadow-card border border-border"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
-                  <span className="text-2xl">🎮</span>
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">Học mà chơi</div>
-                  <div className="text-sm text-muted-foreground">Chơi mà học</div>
-                </div>
-              </div>
-            </motion.div>
+              <div className="flex justify-between w-full mt-6 px-4">
+                {/* Floating Card: Học mà chơi */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.8 }}
+                  className="bg-card p-4 rounded-2xl shadow-card border border-border"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
+                      <span className="text-2xl">🎮</span>
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground">Học mà chơi</div>
+                      <div className="text-sm text-muted-foreground">Chơi mà học</div>
+                    </div>
+                  </div>
+                </motion.div>
 
-            {/* Another Floating Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1 }}
-              className="absolute -top-4 -right-4 bg-card p-4 rounded-2xl shadow-card border border-border"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <span className="text-2xl">⭐</span>
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">4.9/5</div>
-                  <div className="text-sm text-muted-foreground">Đánh giá</div>
-                </div>
+                {/* Floating Card: Đánh giá */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1 }}
+                  className="bg-card p-4 rounded-2xl shadow-card border border-border"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                      <span className="text-2xl">⭐</span>
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground">4.9/5</div>
+                      <div className="text-sm text-muted-foreground">Đánh giá</div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
