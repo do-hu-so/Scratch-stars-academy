@@ -1,10 +1,10 @@
 fastapi
 uvicorn
-docx2txt
+#docx2txt
 groq
-python-dotenv
+#python-dotenv
 langchain-community
 langchain-huggingface
-chromadb
-pypdf
-sentence-transformers
+
+
+

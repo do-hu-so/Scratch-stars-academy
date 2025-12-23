@@ -9,7 +9,11 @@ api_key = os.getenv("API_KEY")
 from .rag import RAGSystem
 
 # Initialize global RAG system to avoid reloading on every request
-rag_system = RAGSystem(data_dir=os.path.join(os.path.dirname(__file__), "data"), persist_dir=os.path.join(os.path.dirname(__file__), "chroma_db"))
+# Use /tmp for Vercel/Serverless environments as other dirs are read-only
+rag_system = RAGSystem(
+    data_dir=os.path.join(os.path.dirname(__file__), "data"), 
+    persist_dir="/tmp/chroma_db"
+)
 
 class Chatbot:
     def __init__(self, question: str) -> None:
@@ -48,7 +52,7 @@ Nếu thông tin bên trên không đủ để trả lời, hãy trả lời d�
             stream=True
         )
 
-        answer = ""  # 👈 gom đáp án
+        answer = ""  
 
         for chunk in completion:
             content = chunk.choices[0].delta.content
